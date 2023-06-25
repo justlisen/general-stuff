@@ -1,0 +1,17 @@
+openapi: 3.0.3
+components:
+  schemas:
+    customer_transaction:
+      type: object
+      properties:
+        transaction_id:
+          type: number
+        customer_id:
+          type: number
+        datetime:
+          type: string
+          format: date-time
+        amount:
+          type: number
+        type:
+          type: string
