@@ -592,11 +592,5 @@
 				]
 			}
 		}
-	],
-	"variable": [
-		{
-			"key": "baseUrl",
-			"value": "https://mnrt89bzmjst0y3fmqytsnrvg8.c360a.salesforce.com/api/v1/ingest/sources/Test_Ingestion_API_Lisen"
-		}
 	]
 }
