@@ -1,0 +1,602 @@
+{
+	"info": {
+		"_postman_id": "0380b11c-483b-4ad0-869f-eaf1c9668197",
+		"name": "Reusable Asset - Data Cloud Ingestion API",
+		"description": "Test Ingestion API Lisen Object Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "110879"
+	},
+	"item": [
+		{
+			"name": "customer_transaction",
+			"item": [
+				{
+					"name": "Upsert customer_transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\":[{\n        \"transaction_id\": \"0005\",\n        \"customer_id\": \"0001\",\n        \"datetime\": \"2023-04-05T04:18:46.316Z\",\n        \"email\": \"llisen@salesforce.com\",\n        \"first_name\": \"Lisen\",\n        \"last_name\": \"SF\",\n        \"amount\": 888,\n        \"type\": \"Online\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{data_cloud_ingestion_api_url}}/customer_transaction",
+							"host": [
+								"{{data_cloud_ingestion_api_url}}"
+							],
+							"path": [
+								"customer_transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accepted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "No Content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  },\n  {\n    \"city\": \"<string>\",\n    \"created\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"state\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"last_name\": \"<string>\",\n    \"maid\": \"<number>\",\n    \"first_name\": \"<string>\"\n  }\n]",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete customer_transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{data_cloud_ingestion_api_url}}/customer_transaction?ids=<string>",
+							"host": [
+								"{{data_cloud_ingestion_api_url}}"
+							],
+							"path": [
+								"customer_transaction"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "<string>",
+									"description": "(Required) Id of runner_profiles"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accepted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles?ids=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "<string>",
+											"description": "(Required) Id of runner_profiles"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles?ids=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "<string>",
+											"description": "(Required) Id of runner_profiles"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles?ids=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "<string>",
+											"description": "(Required) Id of runner_profiles"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles?ids=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "<string>",
+											"description": "(Required) Id of runner_profiles"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/runner_profiles?ids=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"runner_profiles"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "<string>",
+											"description": "(Required) Id of runner_profiles"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Data Cloud Access Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"data_cloud_access_token\", jsonData.access_token);\r",
+							"pm.environment.set(\"data_cloud_instance_url\", jsonData.instance_url);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"/*** Prepare JWT Token */\r",
+							"// Loading the library to generate JWT\r",
+							"eval(pm.globals.get('pmlib_code'));\r",
+							"\r",
+							"var header = {\r",
+							"    \"alg\": \"RS256\",\r",
+							"    \"typ\": \"JWT\"\r",
+							"};\r",
+							"\r",
+							"var body = {\r",
+							"  \"iss\": \"xxx\", // Replace with Connected App Secret Key\r",
+							"  \"sub\": \"xxx\", // Replace with Salesforce API user's username\r",
+							"  \"aud\": \"https://login.salesforce.com\"\r",
+							"}\r",
+							"\r",
+							"// JWK used by jwt signature\r",
+							"// To be replaced -> paste in private key in https://irrte.ch/jwt-js-decode/pem2jwk.html\r",
+							"const jwk = {\r",
+							"    \"kty\": \"RSA\",\r",
+							"    \"n\": \"tuXu7ra2dKo46mzDehIOx7OzXLAMuEoeWs2sXev6zchSwPlsKiQvBB93gSN8B3IDkKPvnptb6o63bmUgfqTMRWYbp9jYi-Ar1q32QeSKdCMhTxHK9f1XChpJ-w43URFx32Nf5gwf8VX1GBouqU_vG4FL-MHLsPQFYV6vXSsibwghN1E_aQggfY-Gb53zAds59xualCMbJ9lUaScYQ9iAovBOVpzyRk5MnP-UJQmpKLjQBFN0IYNO0tvOZ3NcV33xiL0lD7VSMeDWrtNw7NvHrHyoPkFOsvcB3KZA7hTsWNHfIXcb-Pn235ngDO5aGhs9Ah_Zn72-0PgCU7bYhYou1w\",\r",
+							"    \"e\": \"AQAB\",\r",
+							"    \"d\": \"ML8Jtm_WIzP3JWvFkbRcYhdf95UoXrnKa1Mj3Ih3eP8qJyqTDIxGR6gHVtDZTraxgoxe4fvwPIy7EN49EePkWZ7EQjEGTgl6RaZp2tgJmrh-OS-502QpHZUyIIqCbcXjfrFirtKOdOj_AOSBiTi3trH4SJ2GJ2xyPqhYvtEvRT4GjHokyvdZ2Ux1vrsOBYhocklizoW4Gk76fwcyDQAvKKwo5K01yO1QoRxJ1bKQHN7ov7gzVUngM7v1WYRLJbGfIxZ033uABILvypepzIb_dv5mTvdyoxUFkwZ3j-riIF6LUb06rPIJu4rPlCx4i1-JUWV3IOzXlTNDRi0NtfKmuQ\",\r",
+							"    \"p\": \"7tP9XcRDBdc2-4QF3RAFgUYQGshQU8h4arYTUmTB4MPhc6gQyYOFonhwEchVlO5X4CUhzcIF0o_gWJrSC35O65JwmVgnFpSyP4YLTGltRKszBk3ey1xGvLp0zu1L7DFViI8BjZ8kinEErw1Jc4iOWWfaVqklGZAGKeKpwTgCEis\",\r",
+							"    \"q\": \"xAx2_mXCwwaD8GWnZ7P6tspukuUCecC9EvEmmuHEW1sLfVp-HJ-fRG_oy6_1o5a2Y2XEm1-pua1ICaEqQPJSjWtGstIXr6WjqOo1MZk-O_stj77KsfeH4fCNTUTbUfnlIncSyCNF12YtQy_rxH7CiQr7H6WmhHtWWc43QjOZfAU\",\r",
+							"    \"dp\": \"IwCUwJpUDFYXa9NUnKqNc_3VvGchRrY518HpoQi9VXi_4Rh_pVkOS9qE6kZHLLWl0Wb_xk0qV0rY4YOHR0HyxRnIQOEnkWqnmSHHJCLLbeX9a24cOgfDIkPdfLpQh0RPudzjqGLrkxKvUgyLeFBKNJZA7LSLiGyQSrE6mePggdM\",\r",
+							"    \"dq\": \"ocXjXxMbfpDeyL0pQYKbbMBoM-CzhUJNAtdpUr7fp77eIUdN71KsOu3ZfFKrcJ0JzcWJUejDhgr9-aw60LLk-fs-sIp6rx8QiG8TC-V3HEmtFAONAQPP5dn4z3z1OZTqxeDZ57prhE21Jc7iTxeGcU1VYYzwdjvMSnjG0mL_0P0\",\r",
+							"    \"qi\": \"Mf8yi78hyt5IaFvOaroC26CU8IYWtKK8txNYf7MWUMFDYIEgqwMT-DcUOSmVqjQumlcBGFcEKp8tlnQtGSzsff88ZnrrA5SSXIuyEvAWXRsz9cxZ-GG4XB60PQIXnAK-tmXHz_b8YP67KQlyVadDMOgxzsfZF7wLuSe6D3YY8XM\"\r",
+							"}\r",
+							"\r",
+							"// Create a signed jwt (JWS)\r",
+							"const jws = pmlib.jwtSign(jwk, body, header, 3600, 'RS256');\r",
+							"console.log('Signed JWT: ' + jws)\r",
+							"\r",
+							"// Set to environment variable\r",
+							"pm.environment.set('jwt', jws);\r",
+							"\r",
+							"\r",
+							"/*** Acquire Access Token */\r",
+							"const postRequest = {\r",
+							"  url: 'https://login.salesforce.com/services/oauth2/token?grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=' + pm.environment.get('jwt'),\r",
+							"  method: 'GET',\r",
+							"  timeout: 0\r",
+							"};\r",
+							"\r",
+							"pm.sendRequest(postRequest, function (err, res) {\r",
+							"    var responseJson = res.json();\r",
+							"    console.log(responseJson);\r",
+							"    pm.environment.set(\"access_token\", responseJson.access_token);\r",
+							"    pm.environment.set(\"instance_url\", responseJson.instance_url);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:salesforce:grant-type:external:cdp",
+							"type": "text"
+						},
+						{
+							"key": "subject_token",
+							"value": "{{access_token}}",
+							"type": "text"
+						},
+						{
+							"key": "subject_token_type",
+							"value": "urn:ietf:params:oauth:token-type:access_token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{instance_url}}/services/a360/token",
+					"host": [
+						"{{instance_url}}"
+					],
+					"path": [
+						"services",
+						"a360",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{data_cloud_access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://mnrt89bzmjst0y3fmqytsnrvg8.c360a.salesforce.com/api/v1/ingest/sources/Test_Ingestion_API_Lisen"
+		}
+	]
+}
